@@ -44,10 +44,10 @@ def viena_funkcija(dalyviai):
 
 
 # Programos pradžia
-# persikeliam duomenų failą į 'duomenys' kontekstą
-with open('u1.txt') as duomenys:
+# persikeliam duomenų failą į 'failas' kontekstą
+with open('u1.txt') as failas:
     # perskaitom pirmą eilutę kad turėtumėm bendrą dalyvių kiekį
-    dalyviu_kiekis = int(duomenys.readline())
+    dalyviu_kiekis = int(failas.readline())
     # pasiruošiam tuščią list kad galėtumėm jį papildyt dalyviais kurie kiekvieną dieną įvedė reikšmes
     tikri_dalyviai = []
     # sukam ciklą tiek kartų kiek bendrai yra dalyvių, _ yra naudojamas kaip nereikalingas kimtamasis kurio nenaudosim
@@ -58,7 +58,7 @@ with open('u1.txt') as duomenys:
         # readline() - nuskaito eilutę
         # strip() - panaikina '\n' elementus nuo kiekvienos eilutės pabaigos
         # split(' ') - suskirsto kiekvieną tarpu atskirtą reikšmę kaip atskirą listo reikšmę
-        dalyvis = duomenys.readline().strip().split(' ')
+        dalyvis = failas.readline().strip().split(' ')
 
         # pasukam ciklą per žingsnių reikšmes šiam dalyviui,
         # dalyvis[2:] pradeda iteruoti praleisdamas
